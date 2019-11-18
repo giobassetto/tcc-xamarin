@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:x1="clr-namespace:AppTcc2"
              mc:Ignorable="d"
              x:Class="AppTcc2.MainGit"
              Title="Usuários"
@@ -41,8 +41,9 @@
                         <FlexLayout Direction="Column" FlexLayout.Grow="1" AlignItems="Center">
                             <Image Source="{Binding avatar_url}" WidthRequest="70" HeightRequest="70" />
                             <Label Text="{Binding name}" FontSize="Title" TextColor="Black"/>
-                            <Label Text="{Binding bio}" FontSize="Small" TextColor="#778899" />
+                            <Label Text="{Binding bio}" FontSize="Small" TextColor="#778899"/>
                             <FlexLayout Direction="Row"  JustifyContent="Center" FlexLayout.Grow="1" AlignContent="Center" AlignItems="Stretch">
+                            
                             <Button
                                 BackgroundColor="#3700B3"
                                 Text="Ver Perfil"
@@ -51,9 +52,18 @@
                                 TextColor="White"
                                 Margin="15"
                                 BorderWidth="3"
-                                CommandParameter="{Binding NickName}"
+                                Clicked="ProfileUser"
+                                CommandParameter="{Binding .}"
                                 />
-                            <Button BackgroundColor="#df0000" Text="Remover" WidthRequest="100" HeightRequest="40" TextColor="White" Margin="15" />
+                            <Button
+                                BackgroundColor="#df0000"
+                                Text="Remover" WidthRequest="100"
+                                HeightRequest="40"
+                                TextColor="White"
+                                Margin="15"
+                                Clicked="RemoveUser"
+                                CommandParameter="{Binding .}"
+                                />
                             </FlexLayout>
                         </FlexLayout>
                        </ViewCell>
