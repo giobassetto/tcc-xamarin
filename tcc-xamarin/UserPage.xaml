@@ -1,9 +1,30 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="tccxamarin.UserPage">
     <ContentPage.Content>
-        <FlexLayout Direction="Column" AlignContent="Start">
-            <Label x:Name="lbName" TextColor="Black" FontSize="Title" Margin="25"/>
-            <Label x:Name="lbBio" TextColor="#ddd" FontSize="Small" Margin="10" />
+        <FlexLayout Direction="Column" AlignItems="Center" FlexLayout.Grow="1">
+            <Image x:Name="imageAvatar" WidthRequest="100" HeightRequest="100" />
+            <Label x:Name="lbName" TextColor="Black" FontSize="Title"/>
+            <Label x:Name="lbBio" TextColor="#778899" FontSize="Small" Margin="10" />
+            <FlexLayout Direction="Column" FlexLayout.Grow="1" AlignContent="Center">
+             <ListView  HasUnevenRows="True"
+                       x:Name="listStarreds"
+                        Margin="10"
+             >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <FlexLayout Direction="Row" AlignContent="Start" FlexLayout.Grow="1" BackgroundColor="#eee" Margin="10">
+                                <Image Source="{Binding avatar_url}" WidthRequest="60" HeightRequest="60" />
+                                <FlexLayout Direction="Column" FlexLayout.Grow="1">
+                                    <Label Text="{Binding name}" FontSize="Medium" TextColor="Black" />
+                                    <Label Text="{Binding login}" FontSize="Small" TextColor="#778899" FlexLayout.AlignSelf="Auto"/>
+                                </FlexLayout>
+                            </FlexLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            </FlexLayout>
         </FlexLayout>
     </ContentPage.Content>
 </ContentPage>

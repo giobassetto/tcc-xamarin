@@ -1,5 +1,6 @@
 ﻿using System;
 using AppTcc2;
+using Plugin.Media;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,9 +15,9 @@ namespace tcc_xamarin
             MainPage = new NavigationPage(new MainPage()) { BarBackgroundColor = Color.FromHex("3700B3"), BarTextColor = Color.White };
         }
 
-        protected override void OnStart()
+        protected override async void OnStart()
         {
-            // Handle when your app starts
+            await CrossMedia.Current.Initialize();
         }
 
         protected override void OnSleep()

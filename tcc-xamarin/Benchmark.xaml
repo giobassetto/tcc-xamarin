@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="tccxamarin.Benchmark">
+    <FlexLayout Direction="Column" AlignContent="Start">
+        <Button
+                Margin="20"
+                BackgroundColor="#3700B3" 
+                HorizontalOptions="Center"
+                Text="Iniciar Teste"
+                FontAttributes="Bold"
+                TextColor="White"
+                WidthRequest="320"
+                HeightRequest="50"
+                Clicked="iniciarTeste"
+                FlexLayout.AlignSelf="Center"
+         />
+        <Label
+            Margin="20"
+            TextColor="Black"
+            FontSize="Title"
+            FlexLayout.AlignSelf="Center"
+            x:Name="resultBenchmark"
+        />
+    </FlexLayout>
+</ContentPage>

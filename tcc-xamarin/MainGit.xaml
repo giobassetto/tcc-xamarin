@@ -31,7 +31,6 @@
                 />
             </FlexLayout>
             <FlexLayout Direction="Column" FlexLayout.Grow="1" FlexLayout.Order="2" FlexLayout.AlignSelf="Start">
-                <Image Source="https://avatars2.githubusercontent.com/u/2254731?v=4" WidthRequest="100" HeightRequest="100" />
             <ListView  HasUnevenRows="True"
                        x:Name="list1"
               >
