@@ -32,5 +32,9 @@ namespace AppTcc2
         {
             await Navigation.PushAsync(new Benchmark() { Title = "Benchmark" });
         }
+        async private void _navigationMapa(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Mapa() { Title = "Localização" });
+        }
     }
 }

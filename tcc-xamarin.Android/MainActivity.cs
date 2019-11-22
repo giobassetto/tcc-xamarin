@@ -25,8 +25,8 @@ namespace tcc_xamarin.Droid
             CrossCurrentActivity.Current.Activity = this;
 
             await CrossMedia.Current.Initialize();
-
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+            Xamarin.FormsGoogleMaps.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
         }
